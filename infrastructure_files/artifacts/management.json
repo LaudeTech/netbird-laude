@@ -1,0 +1,113 @@
+{
+    "Stuns": [
+        {
+            "Proto": "udp",
+            "URI": "stun:netbird.laude.tech:3478",
+            "Username": "",
+            "Password": ""
+        }
+    ],
+    "TURNConfig": {
+        "TimeBasedCredentials": false,
+        "CredentialsTTL": "12h0m0s",
+        "Secret": "secret",
+        "Turns": [
+            {
+                "Proto": "udp",
+                "URI": "turn:netbird.laude.tech:3478",
+                "Username": "self",
+                "Password": "UOk1fI/J84CrXljINC6/9gFBGFueMPJLfbGshk5L6pE"
+            }
+        ]
+    },
+    "Relay": {
+        "Addresses": [
+            "rel://netbird.laude.tech:33080"
+        ],
+        "CredentialsTTL": "24h0m0s",
+        "Secret": "K8UeVSjVIxwmv8tsXm8VLRpAYQJxq4XOn3J6XK6EDlg"
+    },
+    "Signal": {
+        "Proto": "http",
+        "URI": "netbird.laude.tech:10000",
+        "Username": "",
+        "Password": ""
+    },
+    "Datadir": "/var/lib/netbird/",
+    "DataStoreEncryptionKey": "iJxnRlab7z0EJmi48Q+eSvNyGdodNKqoWUZqEbCTq1g=",
+    "HttpConfig": {
+        "LetsEncryptDomain": "",
+        "CertFile": "/etc/letsencrypt/live/netbird.laude.tech/fullchain.pem",
+        "CertKey": "/etc/letsencrypt/live/netbird.laude.tech/privkey.pem",
+        "AuthAudience": "b60f9871-2449-4b47-aef2-8c78b3c37f98",
+        "AuthIssuer": "https://login.microsoftonline.com/78382628-cb24-45dc-9233-1a4adaa0d7e0/v2.0",
+        "AuthUserIDClaim": "oid",
+        "AuthKeysLocation": "https://login.microsoftonline.com/78382628-cb24-45dc-9233-1a4adaa0d7e0/discovery/v2.0/keys",
+        "OIDCConfigEndpoint": "https://login.microsoftonline.com/78382628-cb24-45dc-9233-1a4adaa0d7e0/v2.0/.well-known/openid-configuration",
+        "IdpSignKeyRefreshEnabled": true,
+        "ExtraAuthAudience": ""
+    },
+    "IdpManagerConfig": {
+        "ManagerType": "azure",
+        "ClientConfig": {
+            "Issuer": "https://login.microsoftonline.com/78382628-cb24-45dc-9233-1a4adaa0d7e0/v2.0",
+            "TokenEndpoint": "https://login.microsoftonline.com/78382628-cb24-45dc-9233-1a4adaa0d7e0/oauth2/v2.0/token",
+            "ClientID": "b60f9871-2449-4b47-aef2-8c78b3c37f98",
+            "ClientSecret": "qge8Q~KH396IGCIP7F1qAyc.uxZh0cvJ9WHn-ceu",
+            "GrantType": "client_credentials"
+        },
+        "ExtraConfig": {
+            "GraphApiEndpoint": "https://graph.microsoft.com/v1.0",
+            "ObjectId": "1aa59b89-3356-4232-92f5-161f10b86709"
+        },
+        "Auth0ClientCredentials": null,
+        "AzureClientCredentials": null,
+        "KeycloakClientCredentials": null,
+        "ZitadelClientCredentials": null
+    },
+    "DeviceAuthorizationFlow": {
+        "Provider": "none",
+        "ProviderConfig": {
+            "ClientID": "",
+            "ClientSecret": "",
+            "Domain": "",
+            "Audience": "b60f9871-2449-4b47-aef2-8c78b3c37f98",
+            "TokenEndpoint": "https://login.microsoftonline.com/78382628-cb24-45dc-9233-1a4adaa0d7e0/oauth2/v2.0/token",
+            "DeviceAuthEndpoint": "https://login.microsoftonline.com/78382628-cb24-45dc-9233-1a4adaa0d7e0/oauth2/v2.0/devicecode",
+            "AuthorizationEndpoint": "",
+            "Scope": "openid",
+            "UseIDToken": false,
+            "RedirectURLs": null,
+            "DisablePromptLogin": false,
+            "LoginFlag": 0
+        }
+    },
+    "PKCEAuthorizationFlow": {
+        "ProviderConfig": {
+            "ClientID": "b60f9871-2449-4b47-aef2-8c78b3c37f98",
+            "ClientSecret": "",
+            "Domain": "",
+            "Audience": "b60f9871-2449-4b47-aef2-8c78b3c37f98",
+            "TokenEndpoint": "https://login.microsoftonline.com/78382628-cb24-45dc-9233-1a4adaa0d7e0/oauth2/v2.0/token",
+            "DeviceAuthEndpoint": "",
+            "AuthorizationEndpoint": "https://login.microsoftonline.com/78382628-cb24-45dc-9233-1a4adaa0d7e0/oauth2/v2.0/authorize",
+            "Scope": "openid profile email offline_access User.Read api://b60f9871-2449-4b47-aef2-8c78b3c37f98/api",
+            "UseIDToken": true,
+            "RedirectURLs": [
+                "http://localhost:53000"
+            ],
+            "DisablePromptLogin": false,
+            "LoginFlag": 1
+        }
+    },
+    "StoreConfig": {
+        "Engine": "sqlite"
+    },
+    "ReverseProxy": {
+        "TrustedHTTPProxies": [],
+        "TrustedHTTPProxiesCount": 0,
+        "TrustedPeers": [
+            "0.0.0.0/0"
+        ]
+    }
+}
